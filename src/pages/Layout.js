@@ -4,9 +4,9 @@ import { Nav } from "../components";
 
 const Layout = () => ({
   view: vnode =>
-    m(".container", [
+    m("", [
       m(Nav(AppModel.pages)),
-      m(".container", [m("section.m-4", vnode.children)])
+      m(".container-fluid", [m("section.m-4", vnode.children)])
     ])
 });
 

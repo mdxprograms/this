@@ -1,7 +1,8 @@
 import m from "mithril";
 
-const Home = () => ({
-  view: () => m("h1.title", "hello World")
+const Home = ({ AppModel }) => ({
+  oninit: () => AppModel.setPageTitle(),
+  view: vnode => m("h1.title", AppModel.title)
 });
 
 export default Home;
