@@ -1,12 +1,13 @@
 import m from "mithril";
 
-//- Title :: number -> string -> element
+//- Title :: { size: number, value: string, m }
 export const Title = (size, value) => m(`h${size}`, value);
 
-//- Button :: string -> string -> function -> element
+//- Button :: { type: string, value: string, cb: function, m }
 export const Button = (type, value, cb) =>
   m("button", { class: `btn btn-${type}`, onclick: cb }, value);
 
+// - Nav :: { pages: array, m }
 export const Nav = pages => ({
   view: () =>
     m("nav.navbar.navbar-expand-lg.navbar-light.bg-light", [
